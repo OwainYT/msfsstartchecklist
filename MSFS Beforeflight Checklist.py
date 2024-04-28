@@ -6,6 +6,8 @@ import subprocess
 import linecache
  # this is all the special features
 
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.info('Logging started')
 file_path= 'variables.txt'
 
 # Read the specified line from the file
@@ -19,9 +21,6 @@ logging.info('Opening variables.txt')
 logging.info (print(file_contents))
 
 logging.critical('Hello World!')
-# debug thing
-logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-logging.info('Logging started')
 
 logging.info('The app should now be available')
 
@@ -29,12 +28,12 @@ logging.info('The app should now be available')
 
 # exit hover code    
 def on_enter(event):
-    button3.config(text="In a while crocodile, enjoy your flight :)")
-    button3.config(bg='red')
-    logging.info('button3 hover')
+    button10.config(text="In a while crocodile, enjoy your flight :)")
+    button10.config(bg='red')
+    logging.info('exit button hover')
 
 def on_leave(event):
-    button3.config(text="Exit")
+    button10.config(text="Exit")
 
 # actions
 def command1():
@@ -61,7 +60,7 @@ def command3():
     logging.warning('button pressed')
     subprocess.Popen(linecache.getline(file_path, line_number))
 
-def command4():
+def command10():
     print("in a while crocodile")
     logging.warning('quit button pressed')
     quit()
@@ -89,10 +88,10 @@ button2.grid(row=2, column=5)
 button3 = tk.Button(root, text="Start Navigraph Charts", command=command3)
 button3.grid(row=3, column=5)
 
-button4 = tk.Button(root, text="Exit", command=command4)
-button3.grid(row=4, column=5)
-button3.bind("<Enter>", on_enter)
-button3.bind("<Leave>", on_leave)
+button10 = tk.Button(root, text="Exit", command=command10)
+button10.grid(row=4, column=5)
+button10.bind("<Enter>", on_enter)
+button10.bind("<Leave>", on_leave)
 
 logging.warning('buttons created')
 
