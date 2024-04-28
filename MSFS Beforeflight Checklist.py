@@ -55,7 +55,7 @@ def command2():
 
 def command3():
     print("Button 3")
-    line_number=2
+    line_number=3
     line = linecache.getline(file_path, line_number)
     print(linecache.getline(file_path, line_number))
     logging.warning('button pressed')
