@@ -6,6 +6,16 @@ import subprocess
 import linecache
  # this is all the special features
 
+ # this creates the window
+root = tk.Tk()
+window_width = 265
+window_height = 300
+x_position = 960 # Distance from the left edge of the screen
+y_position =  540 # Distance from the top edge of the screen
+root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
+root.title("MSFS PreFlight Checklist")
+logging.warning('window created')
+
 logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info('Logging started')
 file_path= 'variables.txt'
@@ -64,16 +74,6 @@ def command10():
     print("in a while crocodile")
     logging.warning('quit button pressed')
     quit()
-
-# this creates the window
-root = tk.Tk()
-window_width = 285
-window_height = 300
-x_position = 960 # Distance from the left edge of the screen
-y_position =  540 # Distance from the top edge of the screen
-root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
-root.title("MSFS PreFlight Checklist")
-logging.warning('window created')
 
 # buttons
 # button = tk.Button(root, text="", command=)
