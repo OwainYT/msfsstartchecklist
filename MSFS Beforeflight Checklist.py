@@ -67,7 +67,11 @@ def command10():
 
 # this creates the window
 root = tk.Tk()
-root.geometry("260x300")
+window_width = 285
+window_height = 300
+x_position = 960 # Distance from the left edge of the screen
+y_position =  540 # Distance from the top edge of the screen
+root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 root.title("MSFS PreFlight Checklist")
 logging.warning('window created')
 
