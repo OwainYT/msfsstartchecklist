@@ -1,0 +1,8 @@
+Welcome to the variables file - I didn't know how to make a setup part for the app, so here we are :)
+
+Please be careful here, point the paths in their entirety to the .exe of the app, if you don't have it, leave it blank
+
+VolantaPath= (change me)
+MSFSPath= (change me)
+NavigraphPath= (change me)
+vPilotPath= (change me)
