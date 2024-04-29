@@ -6,36 +6,37 @@ import os
 import subprocess
 import linecache
 
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 file_path = 'variables.txt'
 
 root = tk.Tk()
-window_width = 285
-window_height = 300
+window_width = 180
+window_height = 200
 x_position = 960 # Distance from the left edge of the screen
 y_position =  540 # Distance from the top edge of the screen
 root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 
 # logging
-logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info('Logging started')
 
 # actions
 def save_text():
     entered_text = entry.get()
     with open(file_path, 'w') as file:
-        file.write(entered_text)
+        file.write('"' + entered_text + '"')
     print("Text saved to 'text_file.txt'")
 
 def save_text2():
     entered_text2 = entry2.get()
     with open(file_path, 'a') as file:
-        file.write('\n' + entered_text2)
+        file.write('\n' + '"' + entered_text2 + '"')
     print("Text saved to 'text_file.txt'")
 
 def save_text3():
     entered_text3 = entry3.get()
     with open(file_path, 'a') as file:
-        file.write('\n' + entered_text3)
+        file.write('\n' + '"' + entered_text3 + '"')
     print("Text saved to 'text_file.txt'")
 
 def check_path():

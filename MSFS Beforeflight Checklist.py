@@ -8,8 +8,8 @@ import linecache
 
  # this creates the window
 root = tk.Tk()
-window_width = 265
-window_height = 300
+window_width = 200
+window_height = 170
 x_position = 960 # Distance from the left edge of the screen
 y_position =  540 # Distance from the top edge of the screen
 root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
